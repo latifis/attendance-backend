@@ -20,5 +20,10 @@ router.post(
   validate(userValidator.register),
   userController.register,
 );
+// router.post(
+//   '/forget-password',
+//   validate(userValidator.forgetPassword),
+//   userController.forgetPassword,
+// );
 
 module.exports = router;

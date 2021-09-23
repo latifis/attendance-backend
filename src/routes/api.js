@@ -9,11 +9,15 @@ const router = express.Router();
 //= ===============================
 // API routes
 //= ===============================
-router.get('/me', userController.profile);
+router.get('/user', userController.profile);
 router.post(
   '/changePassword',
   validate(userValidator.changePassword),
   userController.changePassword,
 );
+router.get('/checkin', userController.checkOut);
+router.get('/checkout', userController.checkIn);
+router.get('/user/:userId/location', userController.location)
+
 
 module.exports = router;
